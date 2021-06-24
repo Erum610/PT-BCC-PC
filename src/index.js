@@ -107,7 +107,7 @@ const createToken = document.getElementById('createToken')
 const transferTokens = document.getElementById('transferTokens')
 const approveTokens = document.getElementById('approveTokens')
 const transferTokensWithoutGas = document.getElementById('transferTokensWithoutGas')
-const approveTokensWithoutGas = document.getElementById('approveTokensWithoutGas')
+// const approveTokensWithoutGas = document.getElementById('approveTokensWithoutGas')
 
 // Signed Type Data Section
 const signTypedData = document.getElementById('signTypedData')
@@ -368,15 +368,15 @@ const initialize = async () => {
             })
           }
 
-          approveTokensWithoutGas.onclick = () => {
-            contract.approve('0x2f318C334780961FB129D2a6c30D0763d9a5C970', '70000', {
-              from: accounts[0],
-              to: contract.address,
-              data: '0x095ea7b30000000000000000000000002f318C334780961FB129D2a6c30D0763d9a5C9700000000000000000000000000000000000000000000000000000000000000005',
-              gasPrice: '20000000000',
-            }, (result) => {
-              console.log(result)
-            })
+//           approveTokensWithoutGas.onclick = () => {
+//             contract.approve('0x2f318C334780961FB129D2a6c30D0763d9a5C970', '70000', {
+//               from: accounts[0],
+//               to: contract.address,
+//               data: '0x095ea7b30000000000000000000000002f318C334780961FB129D2a6c30D0763d9a5C9700000000000000000000000000000000000000000000000000000000000000005',
+//               gasPrice: '20000000000',
+//             }, (result) => {
+//               console.log(result)
+//             })
           }
         },
       )
